@@ -25,7 +25,26 @@ export class ImpactTabComponent implements OnInit {
       typeId : "14",
       title : "Life below water",
       content : "Will feed the fish."
+    },
+    {
+      type : "decent-work",
+      typeId : "08",
+      title : "Decent work",
+      content : "Will help to employ 10 homeless persons."
+    },
+    {
+      type : "life-on-land",
+      typeId : "15",
+      title : "Life on land",
+      content : "Will save habitat for 5 wild boars."
+    },
+    {
+      type : "climate-action",
+      typeId : "13",
+      title : "Climate Action",
+      content : "Will reduce the global carbon emission by 10 M tons annually."
     }
+
   ];
 
   constructor() { }
