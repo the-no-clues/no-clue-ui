@@ -1,32 +1,30 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div>
-  <ul class="nav nav-pills nav-stacked">
-    <li class="nav-item">
-      <a class="nav-link glyphicon glyphicon-user" href="#profile" aria-controls="profile" aria-selected="true">
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link fas fa-hammer" href="#impact" aria-controls="impact" aria-selected="false"></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link glyphicon glyphicon-folder-open" href="#portfolio" aria-controls="portfolio" aria-selected="false"></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link glyphicon glyphicon-certificate" href="#certificate" aria-controls="certificate" aria-selected="false"></a>
-    </li>
-    <div class="tab-content" id="TabContent">
-      <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile">
-        <app-profile-tab></app-profile-tab>
-      </div>
-      <div class="tab-pane fade" id="impact" role="tabpanel" aria-labelledby="impact">
-        <app-impact-tab></app-impact-tab>
-      </div>
-      <div class="tab-pane fade" id="portfolio" role="tabpanel" aria-labelledby="portfolio">
-        <app-portfolio-tab></app-portfolio-tab>
-      </div>
-      <div class="tab-pane fade" id="certificate" role="tabpanel" aria-labelledby="certificate">
-        <app-certificate-tab></app-certificate-tab>
-      </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="tabbable">
+                <ul class="nav nav-pills nav-stacked col-md-2">
+                  <li class="active">
+                    <a class="nav-link glyphicon glyphicon-user" data-toggle="tab" href="#profile"></a>
+                  </li>
+                  <li>
+                    <a class="nav-link glyphicon glyphicon-leaf" href="#impact" data-toggle="tab"></a>
+                  </li>
+                  <li>
+                    <a class="nav-link glyphicon glyphicon-folder-open" data-toggle="tab" href="#portfolio" ></a>
+                  </li>
+                  <li>
+                    <a class="nav-link glyphicon glyphicon-certificate" data-toggle="tab" href="#certificate" ></a>
+                  </li>
+                </ul>
+                <div class="tab-content col-md-10">
+                  <div class="tab-pane active" id="profile"> <app-profile-tab></app-profile-tab> </div>
+                  <div class="tab-pane" id="impact"> <app-impact-tab></app-impact-tab> </div>
+                  <div class="tab-pane" id="portfolio"> <app-portfolio-tab></app-portfolio-tab> </div>
+                  <div class="tab-pane" id="certificate"> <app-certificate-tab></app-certificate-tab> </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </ul>
 </div>
+
+<hr>
