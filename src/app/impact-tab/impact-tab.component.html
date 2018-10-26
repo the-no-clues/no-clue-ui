@@ -1,3 +1,15 @@
 <p>
-  impact-tab works!
+  <span *ngFor="let item of items">
+    <div class="col-sm-6 col-md-4">
+      <div class="media">
+          <a href="#">
+            <img class="media-object" src="assets/E_SDG_Icons-{{item.typeId}}.jpg" width="100px">
+          </a>
+        <div class="caption">
+          <h3>{{item.type}}</h3>
+          <p>{{item.content}}</p>
+        </div>
+      </div>
+    </div>
+  </span>
 </p>
