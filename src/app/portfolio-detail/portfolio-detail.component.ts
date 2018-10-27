@@ -38,8 +38,8 @@ export class PortfolioDetailComponent implements OnInit {
 export class PortfolioSellDialog {
 
   constructor(
-    public dialogRef: MatDialogRef<PortfolioSellDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: any) {}
+    /* public dialogRef: MatDialogRef<PortfolioSellDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: any */) {}
 
 /*   onNoClick(): void {
     this.dialogRef.close();

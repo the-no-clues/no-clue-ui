@@ -9,6 +9,7 @@ import { PortfolioDetailComponent } from '../portfolio-detail/portfolio-detail.c
 })
 export class PortfolioComponent implements OnInit {
   public portfolios: any;
+  public imgUrls: any;
 
 
   @Input() portfolioDetail: PortfolioDetailComponent;
@@ -19,6 +20,11 @@ export class PortfolioComponent implements OnInit {
     this.portfolios = this.restService.getPortfolios();
     this.hasEsg(this.portfolios);
     /* console.log(this.portfolios); */
+
+    this.imgUrls = [
+      "/assets/graph.png",
+      "../../assets/graph_future.png"
+    ]
   }
 
   private hasEsg(portfolios) {
