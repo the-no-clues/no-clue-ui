@@ -22,26 +22,6 @@ export class PortfolioDetailComponent implements OnInit {
 
   public setPortfolio(portfolio) {
     this.portfolio = portfolio;
-    this.appendImages();
   }
-
-  public appendImages(){
-    let count: number = 1;
-
-    this.portfolio.sdg.forEach(element => {
-      element.pictureName = this.imageSource(count);
-      count++;
-    });
-  }
-
-
-  imageSource(num) : string {
-    if (num<10) {
-      return "E_SDG_Icons-0"+ num +".jpg";
-    } else {
-        return "E_SDG_Icons-"+ num +".jpg";
-    }
-  }
-
   
 }
