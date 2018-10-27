@@ -1,15 +1,216 @@
-<p>
-  <span *ngFor="let item of items">
-    <div class="col-sm-6 col-md-6">
+
+  <div class="row">
+    <div class="col-md-5 col-md-3">
       <div class="media">
           <a href="#">
-            <img class="media-object" src="assets/E_SDG_Icons-{{item.typeId}}.jpg" width="100px">
+            <img class="media-object" src="assets/E_SDG_Icons-01.jpg" width="150px">
           </a>
         <div class="caption">
-          <h3>{{item.title}}</h3>
-          <p>{{item.content}}</p>
+          <h3>No Poverty&nbsp;<span class="badge">{{ percentage(data.noPoverty) | number:'1.1-1'}}%</span></h3>
+          <p>{{data.noPovertyDesc}}</p>
         </div>
       </div>
     </div>
-  </span>
-</p>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="media">
+          <a href="#">
+            <img class="media-object" src="assets/E_SDG_Icons-02.jpg" width="150px">
+          </a>
+        <div class="caption">
+          <h3>No Hunger&nbsp;<span class="badge">{{ percentage(data.zeroHunger) | number:'1.1-1'}}%</span></h3>
+          <p>{{data.zeroHungerDesc}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="media">
+          <a href="#">
+            <img class="media-object" src="assets/E_SDG_Icons-03.jpg" width="150px">
+          </a>
+        <div class="caption">
+          <h3>Good Health and Well-Being&nbsp;<span class="badge">{{ percentage(data.noPoverty) | number:'1.1-1' }}%</span></h3>
+          <p>{{data.goodHealtDesc}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-3">
+      <div class="media">
+          <a href="#">
+            <img class="media-object" src="assets/E_SDG_Icons-04.jpg" width="150px">
+          </a>
+        <div class="caption">
+          <h3>Quality Education&nbsp;<span class="badge">{{ percentage(data.qualityEducation) | number:'1.1-1' }}%</span></h3>
+          <p>{{data.qualityEducationDesc}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="media">
+          <a href="#">
+            <img class="media-object" src="assets/E_SDG_Icons-05.jpg" width="150px">
+          </a>
+        <div class="caption">
+          <h3>Gender Equality&nbsp;<span class="badge">{{ percentage(data.genderEquality) | number:'1.1-1' }}%</span></h3>
+          <p>{{data.genderEqualityDesc}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="media">
+          <a href="#">
+            <img class="media-object" src="assets/E_SDG_Icons-06.jpg" width="150px">
+          </a>
+        <div class="caption">
+          <h3>Clean Water<span class="badge">{{ percentage(data.cleanWater) | number:'1.1-1' }}%</span></h3>
+          <p>{{data.cleanWaterDesc}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-3">
+      <div class="media">
+          <a href="#">
+            <img class="media-object" src="assets/E_SDG_Icons-07.jpg" width="150px">
+          </a>
+        <div class="caption">
+          <h3>Clean Energy&nbsp;<span class="badge">{{ percentage(data.cleanEnergy) | number:'1.1-1' }}%</span></h3>
+          <p>{{data.cleanWaterDesc}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="media">
+          <a href="#">
+            <img class="media-object" src="assets/E_SDG_Icons-08.jpg" width="150px">
+          </a>
+        <div class="caption">
+          <h3>Decent Work&nbsp;<span class="badge">{{ percentage(data.decentWork) | number:'1.1-1' }}%</span></h3>
+          <p>{{data.decentWorkDesc}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="media">
+          <a href="#">
+            <img class="media-object" src="assets/E_SDG_Icons-09.jpg" width="150px">
+          </a>
+        <div class="caption">
+          <h3>Innovation<span class="badge">{{ percentage(data.innovetion) | number:'1.1-1' }}%</span></h3>
+          <p>{{data.innovetionDesc}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-3">
+      <div class="media">
+          <a href="#">
+            <img class="media-object" src="assets/E_SDG_Icons-10.jpg" width="150px">
+          </a>
+        <div class="caption">
+          <h3>Reduced Inequalities&nbsp;<span class="badge">{{ percentage(data.reduceInequality) | number:'1.1-1' }}%</span></h3>
+          <p>{{data.reduceInequalityDesc}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="media">
+          <a href="#">
+            <img class="media-object" src="assets/E_SDG_Icons-11.jpg" width="150px">
+          </a>
+        <div class="caption">
+          <h3>Sustainable Cities&nbsp;<span class="badge">{{ percentage(data.suistanableCity) | number:'1.1-1' }}%</span></h3>
+          <p>{{data.suistanableCityDesc}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="media">
+          <a href="#">
+            <img class="media-object" src="assets/E_SDG_Icons-12.jpg" width="150px">
+          </a>
+        <div class="caption">
+          <h3>Responsible Consumption<span class="badge">{{ percentage(data.responsibleConsuption) | number:'1.1-1' }}%</span></h3>
+          <p>{{data.responsibleConsuptionDesc}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-3">
+      <div class="media">
+          <a href="#">
+            <img class="media-object" src="assets/E_SDG_Icons-13.jpg" width="150px">
+          </a>
+        <div class="caption">
+          <h3>Climate Action&nbsp;<span class="badge">{{ percentage(data.climateAction) | number:'1.1-1' }}%</span></h3>
+          <p>{{data.climateAction}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="media">
+          <a href="#">
+            <img class="media-object" src="assets/E_SDG_Icons-14.jpg" width="150px">
+          </a>
+        <div class="caption">
+          <h3>Life below Water&nbsp;<span class="badge">{{ percentage(data.lifeWater) | number:'1.1-1' }}%</span></h3>
+          <p>{{data.lifeWater}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="media">
+          <a href="#">
+            <img class="media-object" src="assets/E_SDG_Icons-15.jpg" width="150px">
+          </a>
+        <div class="caption">
+          <h3>Life on Land<span class="badge">{{ percentage(data.lifeOnLand) | number:'1.1-1' }}%</span></h3>
+          <p>{{data.lifeOnLandDesc}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-3">
+      <div class="media">
+          <a href="#">
+            <img class="media-object" src="assets/E_SDG_Icons-16.jpg" width="150px">
+          </a>
+        <div class="caption">
+          <h3>Peace and Justice&nbsp;<span class="badge">{{ percentage(data.justice) | number:'1.1-1' }}%</span></h3>
+          <p>{{data.justiceDesc}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="media">
+          <a href="#">
+            <img class="media-object" src="assets/E_SDG_Icons-17.jpg" width="150px">
+          </a>
+        <div class="caption">
+          <h3>Partnership&nbsp;<span class="badge">{{ percentage(data.partnerShip) | number:'1.1-1' }}%</span></h3>
+          <p>{{data.partnerShipDesc}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>

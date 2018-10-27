@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-impact-tab',
@@ -7,50 +8,68 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImpactTabComponent implements OnInit {
 
-  items = [
-    {
-      type : "no-powerty",
-      typeId : "01",
-      title : "No Powerty",
-      content : "Will save 10 children from starving in Yemen."
-    },
-    {
-      type : "good-health",
-      typeId : "03",
-      title : "Good Health",
-      content : "Will make people run at least 10 minutes a day."
-    },
-    {
-      type : "life-below-water",
-      typeId : "14",
-      title : "Life below water",
-      content : "Will feed the fish."
-    },
-    {
-      type : "decent-work",
-      typeId : "08",
-      title : "Decent work",
-      content : "Will help to employ 10 homeless persons."
-    },
-    {
-      type : "life-on-land",
-      typeId : "15",
-      title : "Life on land",
-      content : "Will save habitat for 5 wild boars."
-    },
-    {
-      type : "climate-action",
-      typeId : "13",
-      title : "Climate Action",
-      content : "Will reduce the global carbon emission by 10 M tons annually."
-    }
+  data = {
+     "clientId": 1,
+     "noPoverty": 365676496,
+     "noPovertyDesc": "with your investment we save 4 children ",
+     "zeroHunger": 92103415,
+     "zeroHungerDesc": "zeor Hunger",
+     "goodHealt": 552182828,
+     "goodHealtDesc": "good welath and being",
+     "qualityEducation": 688574215,
+     "qualityEducationDesc": "quality education",
+     "genderEquality": 773708894,
+     "genderEqualityDesc": "Gender equality ",
+     "cleanWater": 568102048,
+     "cleanWaterDesc": "Nclean water",
+     "cleanEnergy": 658717782,
+     "cleanEnergyDesc": "clean energy",
+     "decentWork": 511903984,
+     "decentWorkDesc": "decent work",
+     "innovetion": 530189201,
+     "innovetionDesc": "Innovetion and infrasctructuere",
+     "reduceInequality": 606410614,
+     "reduceInequalityDesc": "Reduce inequalities",
+     "suistanableCity": 566250128,
+     "suistanableCityDesc": "sustanable cities",
+     "responsibleConsuption": 541109972,
+     "responsibleConsuptionDesc": "Responsible consumptin",
+     "climateAction": 888522912,
+     "climateActionDesc": "Climate action",
+     "lifeWater": 377408853,
+     "lifeWaterDesc": "Life and below water ",
+     "lifeOnLand": 382846641,
+     "lifeOnLandDesc": "life on land ",
+     "justice": 638709859,
+     "justiceDesc": "Justice for all",
+     "partnerShip": 18601347,
+     "partnerShipDesc": "Partner ship for pverall goal"
+ };
 
-  ];
+  total = 0;
 
-  constructor() { }
+  percentage(item) : Number {
+    return 100 / (this.total / item);
+  }
 
-  imageSource(item) : string {
-    return "E_SDG_Icons-"+ item.typeId +".jpg";
+  constructor() {
+    this.total = this.data.partnerShip
+        + this.data.justice
+        + this.data.lifeOnLand
+        + this.data.lifeWater
+        + this.data.climateAction
+        + this.data.responsibleConsuption
+        + this.data.suistanableCity
+        + this.data.reduceInequality
+        + this.data.innovetion
+        + this.data.decentWork
+        + this.data.cleanEnergy
+        + this.data.cleanWater
+        + this.data.genderEquality
+        + this.data.qualityEducation
+        + this.data.goodHealt
+        + this.data.zeroHunger
+        + this.data.noPoverty;
   }
 
   ngOnInit() {
