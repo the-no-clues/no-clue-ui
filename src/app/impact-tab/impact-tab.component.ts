@@ -11,10 +11,10 @@ export class ImpactTabComponent implements OnInit {
 
   data = {
      "clientId": 1,
-     "noPoverty": 365676496,
-     "noPovertyDesc": "with your investment we save 4 children ",
-     "zeroHunger": 92103415,
-     "zeroHungerDesc": "zeor Hunger",
+     "noPoverty": 1,
+     "noPovertyDesc": "This is not an interest for you",
+     "zeroHunger": 0,
+     "zeroHungerDesc": "Similar to 2 children ",
      "goodHealt": 552182828,
      "goodHealtDesc": "good welath and being",
      "qualityEducation": 688574215,
@@ -41,14 +41,14 @@ export class ImpactTabComponent implements OnInit {
      "lifeWaterDesc": "Life and below water ",
      "lifeOnLand": 382846641,
      "lifeOnLandDesc": "life on land ",
-     "justice": 638709859,
+     "justice": 0,
      "justiceDesc": "Justice for all",
-     "partnerShip": 18601347,
+     "partnerShip": 0,
      "partnerShipDesc": "Partner ship for pverall goal"
  };
 
   total = 0;
-
+totaleEsg= 2;
   percentage(item) : Number {
     return 100 / (this.total / item);
   }
@@ -88,7 +88,7 @@ export class ImpactTabComponent implements OnInit {
         + this.data.qualityEducation
         + this.data.goodHealt
         + this.data.zeroHunger
-        + this.data.noPoverty;
+        + this.data.noPoverty    + 30000000;
   }
 
   ngOnInit() {

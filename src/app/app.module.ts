@@ -9,6 +9,7 @@ import { ProfileTabComponent } from './profile-tab/profile-tab.component';
 import { RestService } from './rest.service';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { PortfolioDetailComponent } from './portfolio-detail/portfolio-detail.component';
+import { SellPopupComponent } from './sell-popup/sell-popup.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PortfolioDetailComponent } from './portfolio-detail/portfolio-detail.co
     CertificateTabComponent,
     ProfileTabComponent,
     PortfolioComponent,
-    PortfolioDetailComponent
+    PortfolioDetailComponent,
+    SellPopupComponent
   ],
   imports: [
     BrowserModule,

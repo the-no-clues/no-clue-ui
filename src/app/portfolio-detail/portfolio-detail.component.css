@@ -8,6 +8,17 @@
     display:block;
 }
 
+figure {
+    width: 80px;
+}
+
 img {
-    width: 40px;
+    width: 60px;
+    float: left;
+    padding-right:10px
+}
+
+div.figure {
+    width: 100px;
+    height: 60px;
 }
