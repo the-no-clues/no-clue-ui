@@ -7,7 +7,7 @@
           </a>
         <div class="caption">
           <h3>No Poverty</h3>
-          <p>{{data.noPovertyDesc}}<br><span >{{ percentage(data.noPoverty) | number:'1.1-1'}}%</span></p>
+          <p>{{data.noPovertyDesc}}<br><span [ngClass]="badgeClass(data.noPoverty)">{{ percentage(data.noPoverty) | number:'1.1-1'}}%</span></p>
         </div>
       </div>
     </div>
