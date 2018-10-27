@@ -1,0 +1,43 @@
+<h2>
+  Portfolio
+</h2>
+<table>
+  <thead>
+      <tr class="thead">
+        <th>Name</th>
+        <th>CCY</th>
+        <th>CTV</th>
+        <th>QTA</th>
+        <th>Price</th>
+        <th>Performance</th>
+        <th>SDG</th>
+        <th>ESG</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let portfolio of portfolios">
+      <td (click)="openDetails(portfolio)">
+        {{portfolio?.name}}
+      </td>
+      <td>
+        {{portfolio?.ccy}}
+      </td>
+      <td>
+        {{portfolio?.ctv}}
+      </td>
+      <td>
+        {{portfolio?.qta}}
+      </td>
+      <td>
+        {{portfolio?.price}}
+      </td>
+      <td>
+        {{portfolio?.performance}}
+      </td>
+      <td>
+        {{portfolio?.sdg.overall}}
+      </td>
+      <td>
+        {{portfolio?.hasEsg}}
+      </td>
+    </tr>
+  </table>

@@ -1,0 +1,24 @@
+:host {
+    width: 100%;
+}
+
+:host.is-open {
+    width:65%;
+}
+
+table {
+    width: 100%;
+}
+
+h2 {
+    font-size:300%;
+    margin: 0px 0px 15px;
+}
+
+thead {
+    border-bottom: solid black 1px;
+}
+
+th {
+    margin: 140px 10px 9px;
+}

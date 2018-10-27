@@ -6,6 +6,9 @@ import { ImpactTabComponent } from './impact-tab/impact-tab.component';
 import { PortfolioTabComponent } from './portfolio-tab/portfolio-tab.component';
 import { CertificateTabComponent } from './certificate-tab/certificate-tab.component';
 import { ProfileTabComponent } from './profile-tab/profile-tab.component';
+import { RestService } from './rest.service';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { PortfolioDetailComponent } from './portfolio-detail/portfolio-detail.component';
 
 @NgModule({
   declarations: [
@@ -13,13 +16,15 @@ import { ProfileTabComponent } from './profile-tab/profile-tab.component';
     ImpactTabComponent,
     PortfolioTabComponent,
     CertificateTabComponent,
-    ProfileTabComponent
+    ProfileTabComponent,
+    PortfolioComponent,
+    PortfolioDetailComponent
   ],
   imports: [
     BrowserModule,
     ChartsModule
   ],
-  providers: [],
+  providers: [RestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
