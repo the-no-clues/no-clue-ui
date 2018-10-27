@@ -52,6 +52,14 @@ export class ImpactTabComponent implements OnInit {
     return 100 / (this.total / item);
   }
 
+  isHighScore(item) : Number {
+    return percentage(item) > 10;
+  }
+
+  isLowScore(item) : Number {
+    return percentage(item) < 5;
+  }
+
   constructor() {
     this.total = this.data.partnerShip
         + this.data.justice
