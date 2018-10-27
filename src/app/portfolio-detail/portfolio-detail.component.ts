@@ -1,4 +1,5 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, Inject } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'app-portfolio-detail',
@@ -8,7 +9,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 export class PortfolioDetailComponent implements OnInit {
   private portfolio;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
 
   @HostBinding('class.is-open')
@@ -23,5 +24,25 @@ export class PortfolioDetailComponent implements OnInit {
   public setPortfolio(portfolio) {
     this.portfolio = portfolio;
   }
+
+  public openSearch(): void {
+    const dialogRef = this.dialog.open(PortfolioSellDialog);
+  }
   
+}
+
+@Component({
+  selector: 'portfolio-sell-dialog',
+  templateUrl: 'portfolio-sell-dialog.html',
+})
+export class PortfolioSellDialog {
+
+  constructor(
+    public dialogRef: MatDialogRef<PortfolioSellDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: any) {}
+
+/*   onNoClick(): void {
+    this.dialogRef.close();
+  } */
+
 }

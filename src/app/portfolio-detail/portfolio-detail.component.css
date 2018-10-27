@@ -2,6 +2,8 @@
     display: none;
     width:30%;
     right: 0;
+    float: right;
+    margin-top: -80px;
 }
 
 :host.is-open {
@@ -12,7 +14,12 @@ figure {
     width: 80px;
 }
 
-img {
+img.emoji {
+    width: 20px;
+    margin: 10px;
+}
+
+img.figure-img {
     width: 60px;
     float: left;
     padding-right:10px

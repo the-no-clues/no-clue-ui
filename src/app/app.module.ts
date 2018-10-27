@@ -8,8 +8,12 @@ import { CertificateTabComponent } from './certificate-tab/certificate-tab.compo
 import { ProfileTabComponent } from './profile-tab/profile-tab.component';
 import { RestService } from './rest.service';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { PortfolioDetailComponent } from './portfolio-detail/portfolio-detail.component';
+import { PortfolioDetailComponent, PortfolioSellDialog } from './portfolio-detail/portfolio-detail.component';
 import { SellPopupComponent } from './sell-popup/sell-popup.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatNativeDateModule} from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,13 +24,23 @@ import { SellPopupComponent } from './sell-popup/sell-popup.component';
     ProfileTabComponent,
     PortfolioComponent,
     PortfolioDetailComponent,
-    SellPopupComponent
+    SellPopupComponent,
+    PortfolioSellDialog
   ],
   imports: [
     BrowserModule,
-    ChartsModule
+    ChartsModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    MatNativeDateModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [RestService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    PortfolioDetailComponent,
+    PortfolioSellDialog
+  ]
 })
 export class AppModule { }
