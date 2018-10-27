@@ -23,8 +23,10 @@
                 <div class="tab-content col-md-10">
                   <div class="tab-pane active" id="profile"> <app-profile-tab></app-profile-tab> </div>
                   <div class="tab-pane" id="impact"> <app-impact-tab></app-impact-tab> </div>
-                  <div class="tab-pane" id="portfolio"> <app-portfolio-tab></app-portfolio-tab> </div>
-                  <div class="tab-pane" id="certificate"> <app-certificate-tab></app-certificate-tab> </div>
+                  <div class="tab-pane" id="portfolio"> 
+                      <app-portfolio [portfolioDetail]="portfolioDetail"></app-portfolio>
+                      <app-portfolio-detail #portfolioDetail></app-portfolio-detail> </div>
+                    <div class="tab-pane" id="certificate"> <app-certificate-tab></app-certificate-tab> </div>
                 </div>
             </div>
         </div>
