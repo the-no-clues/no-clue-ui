@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-impact-tab',
@@ -52,12 +53,22 @@ export class ImpactTabComponent implements OnInit {
     return 100 / (this.total / item);
   }
 
-  isHighScore(item) : Number {
-    return percentage(item) > 10;
+  isHighScore(item) : Boolean {
+    return this.percentage(item) > 10;
   }
 
-  isLowScore(item) : Number {
-    return percentage(item) < 5;
+  isLowScore(item) : Boolean {
+    return this.percentage(item) < 5;
+  }
+
+  badgeClass(item) : String[] {
+    if(this.isLowScore(item)) {
+      return ["badge"];
+    } else if(this.isHighScore(item)) {
+      return ["badge","badge-success"];
+    } else {
+      return ["badge","badge-info"];
+    }
   }
 
   constructor() {

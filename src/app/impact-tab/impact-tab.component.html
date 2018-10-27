@@ -7,7 +7,7 @@
           </a>
         <div class="caption">
           <h3>No Poverty</h3>
-          <p>{{data.noPovertyDesc}}<br><span class="badge">{{ percentage(data.noPoverty) | number:'1.1-1'}}%</span></p>
+          <p>{{data.noPovertyDesc}}<br><span >{{ percentage(data.noPoverty) | number:'1.1-1'}}%</span></p>
         </div>
       </div>
     </div>
@@ -19,7 +19,7 @@
           </a>
         <div class="caption">
           <h3>No Hunger</h3>
-          <p>{{data.zeroHungerDesc}}<br><span class="badge">{{ percentage(data.zeroHunger) | number:'1.1-1'}}%</span></p>
+          <p>{{data.zeroHungerDesc}}<br><span [ngClass]="badgeClass(data.zeroHunger)">{{ percentage(data.zeroHunger) | number:'1.1-1'}}%</span></p>
         </div>
       </div>
     </div>
@@ -31,7 +31,7 @@
           </a>
         <div class="caption">
           <h3>Good Health and Well-Being</h3>
-          <p>{{data.goodHealtDesc}}<br><span class="badge">{{ percentage(data.noPoverty) | number:'1.1-1' }}%</span></p>
+          <p>{{data.goodHealtDesc}}<br><span [ngClass]="badgeClass(data.goodHealt)">{{ percentage(data.goodHealt) | number:'1.1-1' }}%</span></p>
         </div>
       </div>
     </div>
@@ -45,7 +45,7 @@
           </a>
         <div class="caption">
           <h3>Quality Education</h3>
-          <p>{{data.qualityEducationDesc}}<br><span class="badge">{{ percentage(data.qualityEducation) | number:'1.1-1' }}%</span></p>
+          <p>{{data.qualityEducationDesc}}<br><span [ngClass]="badgeClass(data.qualityEducation)">{{ percentage(data.qualityEducation) | number:'1.1-1' }}%</span></p>
         </div>
       </div>
     </div>
@@ -57,7 +57,7 @@
           </a>
         <div class="caption">
           <h3>Gender Equality</h3>
-          <p>{{data.genderEqualityDesc}}<br><span class="badge">{{ percentage(data.genderEquality) | number:'1.1-1' }}%</span></p>
+          <p>{{data.genderEqualityDesc}}<br><span [ngClass]="badgeClass(data.genderEquality)">{{ percentage(data.genderEquality) | number:'1.1-1' }}%</span></p>
         </div>
       </div>
     </div>
@@ -69,7 +69,7 @@
           </a>
         <div class="caption">
           <h3>Clean Water</h3>
-          <p>{{data.cleanWaterDesc}}<br><span class="badge">{{ percentage(data.cleanWater) | number:'1.1-1' }}%</span></p>
+          <p>{{data.cleanWaterDesc}}<br><span [ngClass]="badgeClass(data.cleanWater)">{{ percentage(data.cleanWater) | number:'1.1-1' }}%</span></p>
         </div>
       </div>
     </div>
@@ -82,7 +82,7 @@
           </a>
         <div class="caption">
           <h3>Clean Energy</h3>
-          <p>{{data.cleanWaterDesc}}<br><span class="badge">{{ percentage(data.cleanEnergy) | number:'1.1-1' }}%</span></p>
+          <p>{{data.cleanWaterDesc}}<br><span [ngClass]="badgeClass(data.cleanEnergy)">{{ percentage(data.cleanEnergy) | number:'1.1-1' }}%</span></p>
         </div>
       </div>
     </div>
@@ -94,7 +94,7 @@
           </a>
         <div class="caption">
           <h3>Decent Work</h3>
-          <p>{{data.decentWorkDesc}}<br><span class="badge">{{ percentage(data.decentWork) | number:'1.1-1' }}%</span></p>
+          <p>{{data.decentWorkDesc}}<br><span [ngClass]="badgeClass(data.decentWork)">{{ percentage(data.decentWork) | number:'1.1-1' }}%</span></p>
         </div>
       </div>
     </div>
@@ -106,7 +106,7 @@
           </a>
         <div class="caption">
           <h3>Innovation</h3>
-          <p>{{data.innovetionDesc}}<br><span class="badge">{{ percentage(data.innovetion) | number:'1.1-1' }}%</span></p>
+          <p>{{data.innovetionDesc}}<br><span [ngClass]="badgeClass(data.innovetion)">{{ percentage(data.innovetion) | number:'1.1-1' }}%</span></p>
         </div>
       </div>
     </div>
@@ -120,7 +120,7 @@
           </a>
         <div class="caption">
           <h3>Reduced Inequalities</h3>
-          <p>{{data.reduceInequalityDesc}}<br><span class="badge">{{ percentage(data.reduceInequality) | number:'1.1-1' }}%</span></p>
+          <p>{{data.reduceInequalityDesc}}<br><span [ngClass]="badgeClass(data.reduceInequality)">{{ percentage(data.reduceInequality) | number:'1.1-1' }}%</span></p>
         </div>
       </div>
     </div>
@@ -132,7 +132,7 @@
           </a>
         <div class="caption">
           <h3>Sustainable Cities</h3>
-          <p>{{data.suistanableCityDesc}}<br><span class="badge">{{ percentage(data.suistanableCity) | number:'1.1-1' }}%</span></p>
+          <p>{{data.suistanableCityDesc}}<br><span [ngClass]="badgeClass(data.suistanableCity)">{{ percentage(data.suistanableCity) | number:'1.1-1' }}%</span></p>
         </div>
       </div>
     </div>
@@ -144,7 +144,7 @@
           </a>
         <div class="caption">
           <h3>Responsible Consumption</h3>
-          <p>{{data.responsibleConsuptionDesc}}<br><span class="badge">{{ percentage(data.responsibleConsuption) | number:'1.1-1' }}%</span></p>
+          <p>{{data.responsibleConsuptionDesc}}<br><span [ngClass]="badgeClass(data.responsibleConsuption)">{{ percentage(data.responsibleConsuption) | number:'1.1-1' }}%</span></p>
         </div>
       </div>
     </div>
@@ -158,7 +158,7 @@
           </a>
         <div class="caption">
           <h3>Climate Action</h3>
-          <p>{{data.climateAction}}<br><span class="badge">{{ percentage(data.climateAction) | number:'1.1-1' }}%</span></p>
+          <p>{{data.climateAction}}<br><span [ngClass]="badgeClass(data.climateAction)">{{ percentage(data.climateAction) | number:'1.1-1' }}%</span></p>
         </div>
       </div>
     </div>
@@ -170,7 +170,7 @@
           </a>
         <div class="caption">
           <h3>Life below Water</h3>
-          <p>{{data.lifeWater}}<br><span class="badge">{{ percentage(data.lifeWater) | number:'1.1-1' }}%</span></p>
+          <p>{{data.lifeWater}}<br><span [ngClass]="badgeClass(data.lifeWater)">{{ percentage(data.lifeWater) | number:'1.1-1' }}%</span></p>
         </div>
       </div>
     </div>
@@ -182,7 +182,7 @@
           </a>
         <div class="caption">
           <h3>Life on Land</h3>
-          <p>{{data.lifeOnLandDesc}}<br><span class="badge">{{ percentage(data.lifeOnLand) | number:'1.1-1' }}%</span></p>
+          <p>{{data.lifeOnLandDesc}}<br><span [ngClass]="badgeClass(data.lifeOnLand)">{{ percentage(data.lifeOnLand) | number:'1.1-1' }}%</span></p>
         </div>
       </div>
     </div>
@@ -196,7 +196,7 @@
           </a>
         <div class="caption">
           <h3>Peace and Justice</h3>
-          <p>{{data.justiceDesc}}<br><span class="badge">{{ percentage(data.justice) | number:'1.1-1' }}%</span></p>
+          <p>{{data.justiceDesc}}<br><span [ngClass]="badgeClass(data.justice)">{{ percentage(data.justice) | number:'1.1-1' }}%</span></p>
         </div>
       </div>
     </div>
@@ -208,7 +208,7 @@
           </a>
         <div class="caption">
           <h3>Partnership</h3>
-          <p>{{data.partnerShipDesc}}<br><span class="badge">{{ percentage(data.partnerShip) | number:'1.1-1' }}%</span></p>
+          <p>{{data.partnerShipDesc}}<br><span [ngClass]="badgeClass(data.partnerShip)">{{ percentage(data.partnerShip) | number:'1.1-1' }}%</span></p>
         </div>
       </div>
     </div>
